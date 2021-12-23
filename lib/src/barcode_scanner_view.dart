@@ -34,13 +34,12 @@ class _BarcodeScannerViewState extends State<BarcodeScannerView> {
       children: [
         CameraScreen(
           onImage: (inputImage) {
-            debugPrint('=======_BarcodeScannerViewState.build:$inputImage');
             processImage(inputImage);
           },
           cameras: widget.cameras,
         ),
         Container(
-          decoration: ShapeDecoration(
+          decoration: const ShapeDecoration(
             shape: ScannerOverlayShape(
               borderColor: Colors.red,
               borderWidth: 3.0,
